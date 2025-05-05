@@ -1,7 +1,6 @@
 """This is the decoder code which reconstructs the original file from a sequence of images."""
 
 import os
-import argparse
 from PIL import Image
 
 IMAGE_SIZE = 2048  # 2048x2048 image
@@ -58,13 +57,9 @@ def bits_to_file(bits, output_file):
     print(f"[SUCCESS] Reconstructed original file: {output_file}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Reconstruct the original file from a sequence of images.")
-    parser.add_argument("image_sequence_folder", help="Path to the folder containing the image sequence")
-    parser.add_argument("output_file", help="Path to save the reconstructed file")
-    args = parser.parse_args()
-
-    image_sequence_folder = args.image_sequence_folder
-    output_file = args.output_file
+    # Hardcoded paths for input folder and output file
+    image_sequence_folder = r"C:\Users\jhjos\OneDrive\Desktop\YoutubeVault\opfiles\nodev22140x64_sequence"
+    output_file = r"C:\Users\jhjos\OneDrive\Desktop\YoutubeVault\ipfiles\node_reconstructed.msi"
 
     # Get all image paths
     image_files = [
@@ -72,6 +67,10 @@ def main():
         for f in os.listdir(image_sequence_folder)
         if f.lower().endswith('.png')
     ]
+
+    if not image_files:
+        print(f"[ERROR] No valid image files found in folder: {image_sequence_folder}")
+        return
 
     print(f"[INFO] Found {len(image_files)} images in sequence.")
 

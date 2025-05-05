@@ -1,7 +1,6 @@
 """This code converts a file into a sequence of images, where each image contains a portion of the file's binary data. Each image includes a header with metadata (File ID and Sequence Number)."""
 
 import os
-import argparse
 import logging
 from PIL import Image
 
@@ -90,13 +89,9 @@ def split_bits_to_images(bits, output_folder):
         save_bits_as_image(chunk, image_path, file_id, i + 1)
 
 def main():
-    parser = argparse.ArgumentParser(description="Convert a file into a sequence of images.")
-    parser.add_argument("input_file", help="Path to the input file")
-    parser.add_argument("output_base_folder", help="Path to the output folder")
-    args = parser.parse_args()
-
-    input_file = args.input_file
-    output_base_folder = args.output_base_folder
+    # Hardcoded paths for input file and output folder
+    input_file = r"C:\Users\jhjos\OneDrive\Desktop\YoutubeVault\ipfiles\nodev22140x64.msi"
+    output_base_folder = r"C:\Users\jhjos\OneDrive\Desktop\YoutubeVault\opfiles"
 
     if not os.path.exists(input_file):
         print(f"[ERROR] Input file '{input_file}' does not exist.")
