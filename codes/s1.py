@@ -90,8 +90,8 @@ def split_bits_to_images(bits, output_folder):
 
 def main():
     # Hardcoded paths for input file and output folder
-    input_file = r"C:\Users\jhjos\OneDrive\Desktop\YoutubeVault\ipfiles\nodev22140x64.msi"
-    output_base_folder = r"C:\Users\jhjos\OneDrive\Desktop\YoutubeVault\opfiles"
+    input_file = r"testing files/Ekadantaya Vakratundaya Karaoke With Lyrics English Lord Ganesha Songs  Devotional Songs - Om Namah Shivay (480p, h264).mp4"
+    output_base_folder = r"op files"
 
     if not os.path.exists(input_file):
         print(f"[ERROR] Input file '{input_file}' does not exist.")

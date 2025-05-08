@@ -58,8 +58,8 @@ def bits_to_file(bits, output_file):
 
 def main():
     # Hardcoded paths for input folder and output file
-    image_sequence_folder = r"C:\Users\jhjos\OneDrive\Desktop\YoutubeVault\opfiles\nodev22140x64_sequence"
-    output_file = r"C:\Users\jhjos\OneDrive\Desktop\YoutubeVault\ipfiles\node_reconstructed.msi"
+    image_sequence_folder = r"op files/Ekadantaya Vakratundaya Karaoke With Lyrics English Lord Ganesha Songs  Devotional Songs - Om Namah Shivay (480p, h264)_sequence"
+    output_file = r"testing files/reconstructed_ganeshVandana.mp4"
 
     # Get all image paths
     image_files = [
